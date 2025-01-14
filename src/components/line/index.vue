@@ -1,8 +1,8 @@
 <template>
   <main>
-    <div style="display: flex;">
-      <div id="editor" style="width: 50%; height: 400px;"></div>
-      <div ref="chartRef" style="width: 50%; height: 400px;"></div>
+    <div class="line-container">
+      <div class="child" id="editor"></div>
+      <div class="child" ref="chartRef"></div>
     </div>
   </main>
   <button @click=saveLocal>暂存</button>
@@ -29,8 +29,8 @@ const configCode = ref(localStorage.getItem('lineConfig') || `{
     }
   },
   "legend": {
-    "data": ["销量"],
-    "left": "left"
+    "data": ["销量", "库存"],
+    "left": "5%"
   },
   "grid": {
     "left": "3%",
@@ -46,13 +46,21 @@ const configCode = ref(localStorage.getItem('lineConfig') || `{
   "yAxis": {
     "type": "value"
   },
-  "series": [{
-    "name": "销量",
-    "type": "line",
-    "stack": "总量",
-    "data": [120, 200, 150, 80, 70, 110, 130],
-    "areaStyle": {}
-  }]
+  "series": [
+    {
+      "name": "销量",
+      "type": "line",
+      "stack": "总量",
+      "data": [120, 200, 150, 80, 70, 110, 130],
+      "areaStyle": {}
+    },
+    {
+      "name": "库存",
+      "type": "line",
+      "stack": "总量",
+      "data": [50, 100, 90, 40, 30, 70, 100]
+    }
+  ]
 }`);
 
 const saveLocal = () => {
@@ -64,7 +72,7 @@ let chartInstance = null;
 let editor = null;
 
 const initChart = () => {
-  if (chartRef.value) {
+  if(chartRef.value) {
     chartInstance = echarts.init(chartRef.value);
     updateChart();
   }
@@ -102,8 +110,17 @@ onMounted(() => {
 });
 </script>
 
-<style>
+<style scoped lang="less">
 #editor {
   border: 1px solid #ccc;
+}
+
+.line-container {
+  display: flex;
+
+  .child {
+    width: 50%;
+    height: 600px;
+  }
 }
 </style>
