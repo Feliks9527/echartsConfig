@@ -1,29 +1,24 @@
-# echarts-demo
+# ECharts 实时配置
 
-This template should help get you started developing with Vue 3 in Vite.
+本项目旨在帮助您可视化和配置 ECharts。左侧区域是可编辑的配置部分，右侧区域会根据配置实时更新。
 
-## Recommended IDE Setup
+[github](https://github.com/Feliks9527/echartsConfig)
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## 功能
 
-## Customize configuration
+- **可编辑配置**：在左侧区域修改 ECharts 的配置。
+- **实时更新**：右侧区域会立即反映配置的变化。
+- **Vue 3**：基于 Vue 3 构建，提供现代化的开发体验。
+- **Vite**：使用 Vite 实现快速高效的开发和构建流程。
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+## 项目设置
 
-## Project Setup
+### 安装依赖
 
 ```sh
 pnpm install
+pnpm start
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
-pnpm dev
-```
-
-### Compile and Minify for Production
-
-```sh
-pnpm build
-```
+## 预览
+![示例](src/assets/readme/img1.png)
