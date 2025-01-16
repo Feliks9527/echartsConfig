@@ -2,6 +2,7 @@
 
 本项目旨在帮助您可视化和配置 ECharts。左侧区域是可编辑的配置部分，右侧区域会根据配置实时更新。
 
+[demo](https://feliks9527.github.io/)
 [github](https://github.com/Feliks9527/echartsConfig)
 
 ## 功能
