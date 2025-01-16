@@ -2,8 +2,11 @@
 
 本项目旨在帮助您可视化和配置 ECharts。左侧区域是可编辑的配置部分，右侧区域会根据配置实时更新。
 
-[demo](https://feliks9527.github.io/)
-[github](https://github.com/Feliks9527/echartsConfig)
+演示地址
+[online demo](https://feliks9527.github.io/)
+
+国内仓库
+[gitee](https://gitee.com/felikschen/echarts-config)
 
 ## 功能
 
@@ -14,7 +17,7 @@
 
 ## 项目设置
 
-### 安装依赖
+### 启动
 
 ```sh
 pnpm install

@@ -14,6 +14,7 @@ import { useRouter } from 'vue-router'
 const urls = ref([
   { name: 'line', url: '/line' },
   { name: 'bar', url: '/bar' },
+  { name: 'pie', url: '/pie'}
 ])
 
 const router = useRouter()
